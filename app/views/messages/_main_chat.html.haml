@@ -1,5 +1,26 @@
 .ChatMain
   .ChatMain__group--info
-  .ChatMain__message
-    .ChatMain__message--list
-    .ChatMain__message--form
+    .Group
+      .Group__name
+        test
+      %ul.Group__member
+        Member :
+        %li.Group__member--list
+          name1
+        %li.Group__member--list
+          name2
+        %li.Group__member--list
+          name3
+    .EditBtn
+      %a{href: '###'}
+        Edit
+  .ChatMain__message--list
+    .Chat__userName
+    .Chat__dateTime
+    .Chat__message--text
+    .Chat__message--image
+  .ChatMain__message--form
+    .Form__bar
+      .Form__imgBtn
+      .Form__imgBtn--icon
+    .Form__editBtn
