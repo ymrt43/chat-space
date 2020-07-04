@@ -50,6 +50,8 @@
 }
 
 .GroupList {
+  text-decoration: none;
+  color: #ffffff;
   &__name {
     font-size: 15px;
     padding: 20px 0 5px 0;
@@ -71,6 +73,8 @@
   &__message--list {
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px);
+    padding-left: 40px;
+    padding-top: 35px;
   }
   &__message--form {
     background-color: #d2d2d2;
@@ -107,13 +111,67 @@
   border: 1px solid #38aef0;
 }
 
-a {
+.Edit {
   color: #38aef0;
   text-decoration: none;
 }
 
 .Chat {
-  &__userName {}
-  &__dateTime {}
-  &__message {}
+  &__info {
+    display: flex;
+    &--name {
+      color: #333333;
+      font-size: 16px;
+    }
+    &--dateTime {
+      color: #999999;
+      font-size: 12px;
+      vertical-align: top;
+    }
+  }
+  &__message {
+    margin-top: 12px;
+    margin-bottom: 46px;
+    color: #434a54;
+    font-size: 14px;
+  }
+}
+
+.Form {
+  padding: 20px 40px;
+  display: flex;
+  &__inputContent {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    &--textfield {
+      height: 50px;
+      width: 100%;
+      border-style: none;
+      padding: 0 40px 0 10px;
+    }
+    &--image {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    &--file {
+      display: none;
+    }
+  }
+  &__icon--image {
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 25px;
+  }
+  &__submit {
+    margin-left: 15px;
+    padding: 0px 30px;
+    border-style: none;
+    height: 50px;
+    background-color: #38aef0;
+    color: #fff;
+    font-size: 16px;
+  }
 }

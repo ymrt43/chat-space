@@ -4,7 +4,7 @@
       .Group__name
         test
       %ul.Group__member
-        Member :
+        Member:
         %li.Group__member--list
           name1
         %li.Group__member--list
@@ -12,15 +12,35 @@
         %li.Group__member--list
           name3
     .EditBtn
-      %a{href: '###'}
+      %a{class: "Edit", href: '###'}
         Edit
   .ChatMain__message--list
-    .Chat__userName
-    .Chat__dateTime
-    .Chat__message--text
-    .Chat__message--image
+    .Chat__info
+      .Chat__info--name
+        Yoshiko
+      .Chat__info--dateTime
+        2020/07/02(Thu) 22:00:00
+    .Chat__message
+      こんばんは
+    .Chat__info
+      .Chat__info--name
+        Yoshiko
+      .Chat__info--dateTime
+        2020/07/02(Thu) 22:00:00
+    .Chat__message
+      こんばんは
+    .Chat__info
+      .Chat__info--name
+        Yoshiko
+      .Chat__info--dateTime
+        2020/07/02(Thu) 22:00:00
+    .Chat__message
+      こんばんは
   .ChatMain__message--form
-    .Form__bar
-      .Form__imgBtn
-      .Form__imgBtn--icon
-    .Form__editBtn
+    %form.Form
+      .Form__inputContent
+        %input{type:"text", class: "Form__inputContent--textfield", placeholder: "type a message"}
+        %label{class: "Form__inputContent--image"}
+          = icon('fas', 'image', class: "Form__icon--image")
+          %input{type: "file", class: "Form__inputContent--file"}
+      %input{type:"submit", class: "Form__submit",value: "Send"}
