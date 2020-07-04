@@ -1,0 +1,46 @@
+.ChatMain
+  .ChatMain__group--info
+    .Group
+      .Group__name
+        test
+      %ul.Group__member
+        Member:
+        %li.Group__member--list
+          name1
+        %li.Group__member--list
+          name2
+        %li.Group__member--list
+          name3
+    .EditBtn
+      = link_to "###", class: "Edit" do
+        Edit
+  .ChatMain__message--list
+    .Chat__info
+      .Chat__info--name
+        Yoshiko
+      .Chat__info--dateTime
+        2020/07/02(Thu) 22:00:00
+    .Chat__message
+      こんばんは
+    .Chat__info
+      .Chat__info--name
+        Yoshiko
+      .Chat__info--dateTime
+        2020/07/02(Thu) 22:00:00
+    .Chat__message
+      こんばんは
+    .Chat__info
+      .Chat__info--name
+        Yoshiko
+      .Chat__info--dateTime
+        2020/07/02(Thu) 22:00:00
+    .Chat__message
+      こんばんは
+  .ChatMain__message--form
+    %form.Form
+      .Form__inputContent
+        %input{type:"text", class: "Form__inputContent--textfield", placeholder: "type a message"}
+        %label{class: "Form__inputContent--image"}
+          = icon('fas', 'image', class: "Form__icon--image")
+          %input{type: "file", class: "Form__inputContent--file"}
+      %input{type:"submit", class: "Form__submit",value: "Send"}
