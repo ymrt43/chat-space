@@ -11,17 +11,17 @@
           = icon('fas', 'cog', class: "TopItems__btn--icon")
           %span<>
   .SideBar__groupList
-    %a{class: "GroupList", href: '###'}
+    = link_to "###", class: "GroupList" do
       .GroupList__name
         techcamp1
       .GroupList__message
         まだメッセージがありません
-    %a{class: "GroupList", href: '###'}
+    = link_to "###", class: "GroupList" do
       .GroupList__name
         techcamp2
       .GroupList__message
         まだメッセージがありません
-    %a{class: "GroupList", href: '###'}
+    = link_to "###", class: "GroupList" do
       .GroupList__name
         techcamp3
       .GroupList__message
