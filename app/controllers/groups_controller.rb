@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   def new
   end
-  
-  def post
+
+  def create
   end
 end
