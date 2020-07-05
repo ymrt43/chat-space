@@ -2,12 +2,12 @@
   .SideBar__userName
     .TopItems
       .TopItems__name
-        なまえ
+        = current_user.name
       .TopItems__icons
-        =link_to "###", class: "TopItems__btn" do
+        = link_to "###", class: "TopItems__btn" do
           = icon('far', 'edit', class: "TopItems__btn--icon")
           %span<>
-        =link_to "###", class: "TopItems__btn" do
+        = link_to edit_user_path(current_user), class: "TopItems__btn" do
           = icon('fas', 'cog', class: "TopItems__btn--icon")
           %span<>
   .SideBar__groupList
