@@ -11,18 +11,10 @@
           = icon('fas', 'cog', class: "TopItems__btn--icon")
           %span<>
   .SideBar__groupList
-    = link_to "###", class: "GroupList" do
-      .GroupList__name
-        techcamp1
-      .GroupList__message
-        まだメッセージがありません
-    = link_to "###", class: "GroupList" do
-      .GroupList__name
-        techcamp2
-      .GroupList__message
-        まだメッセージがありません
-    = link_to "###", class: "GroupList" do
-      .GroupList__name
-        techcamp3
-      .GroupList__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .GroupList
+        = link_to "###" do
+          .GroupList__name
+            = group.name
+          .GroupList__message
+            まだメッセージがありません
