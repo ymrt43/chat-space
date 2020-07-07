@@ -4,25 +4,17 @@
       .TopItems__name
         = current_user.name
       .TopItems__icons
-        = link_to "###", class: "TopItems__btn" do
+        = link_to new_group_path, class: "TopItems__btn" do
           = icon('far', 'edit', class: "TopItems__btn--icon")
           %span<>
         = link_to edit_user_path(current_user), class: "TopItems__btn" do
           = icon('fas', 'cog', class: "TopItems__btn--icon")
           %span<>
   .SideBar__groupList
-    = link_to "###", class: "GroupList" do
-      .GroupList__name
-        techcamp1
-      .GroupList__message
-        まだメッセージがありません
-    = link_to "###", class: "GroupList" do
-      .GroupList__name
-        techcamp2
-      .GroupList__message
-        まだメッセージがありません
-    = link_to "###", class: "GroupList" do
-      .GroupList__name
-        techcamp3
-      .GroupList__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .GroupList
+        = link_to "###", class: "GroupList" do
+          .GroupList__name
+            = group.name
+          .GroupList__message
+            まだメッセージがありません
