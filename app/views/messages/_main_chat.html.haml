@@ -15,27 +15,7 @@
       = link_to "###", class: "Edit" do
         Edit
   .ChatMain__message--list
-    .Chat__info
-      .Chat__info--name
-        Yoshiko
-      .Chat__info--dateTime
-        2020/07/02(Thu) 22:00:00
-    .Chat__message
-      こんばんは
-    .Chat__info
-      .Chat__info--name
-        Yoshiko
-      .Chat__info--dateTime
-        2020/07/02(Thu) 22:00:00
-    .Chat__message
-      こんばんは
-    .Chat__info
-      .Chat__info--name
-        Yoshiko
-      .Chat__info--dateTime
-        2020/07/02(Thu) 22:00:00
-    .Chat__message
-      こんばんは
+    = render @messages
   .ChatMain__message--form
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__inputContent
