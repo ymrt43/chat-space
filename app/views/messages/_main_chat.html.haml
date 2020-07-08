@@ -9,7 +9,7 @@
           - @group.users.each do |user|
             = user.name
     .EditBtn
-      = link_to "###", class: "Edit" do
+      = link_to "/groups/#{@group.id}/edit", class: "Edit" do
         Edit
   .ChatMain__message--list
     = render @messages
