@@ -2,45 +2,22 @@
   .ChatMain__group--info
     .Group
       .Group__name
-        test
+        = @group.name
       %ul.Group__member
         Member:
         %li.Group__member--list
-          name1
-        %li.Group__member--list
-          name2
-        %li.Group__member--list
-          name3
+          - @group.users.each do |user|
+            = user.name
     .EditBtn
-      = link_to "###", class: "Edit" do
+      = link_to "/groups/#{@group.id}/edit", class: "Edit" do
         Edit
   .ChatMain__message--list
-    .Chat__info
-      .Chat__info--name
-        Yoshiko
-      .Chat__info--dateTime
-        2020/07/02(Thu) 22:00:00
-    .Chat__message
-      こんばんは
-    .Chat__info
-      .Chat__info--name
-        Yoshiko
-      .Chat__info--dateTime
-        2020/07/02(Thu) 22:00:00
-    .Chat__message
-      こんばんは
-    .Chat__info
-      .Chat__info--name
-        Yoshiko
-      .Chat__info--dateTime
-        2020/07/02(Thu) 22:00:00
-    .Chat__message
-      こんばんは
+    = render @messages
   .ChatMain__message--form
-    %form.Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__inputContent
-        %input{type:"text", class: "Form__inputContent--textfield", placeholder: "type a message"}
-        %label{class: "Form__inputContent--image"}
-          = icon('fas', 'image', class: "Form__icon--image")
-          %input{type: "file", class: "Form__inputContent--file"}
-      %input{type:"submit", class: "Form__submit",value: "Send"}
+        = f.text_field :content, class: 'Form__inputContent--textfield', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputContent--image' do
+          = icon('fas', 'image', class: 'Form__icon--image')
+          = f.file_field :image, class: "Form__inputContent--file"
+      = f.submit 'Send', class: "Form__submit"
