@@ -127,6 +127,7 @@
       color: #999999;
       font-size: 12px;
       vertical-align: top;
+      padding-left: 10px;
     }
   }
   &__message {
@@ -135,6 +136,10 @@
     color: #434a54;
     font-size: 14px;
   }
+}
+
+.Message__image {
+  height: 300px;
 }
 
 .Form {
