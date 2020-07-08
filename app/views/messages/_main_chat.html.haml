@@ -2,15 +2,12 @@
   .ChatMain__group--info
     .Group
       .Group__name
-        test
+        = @group.name
       %ul.Group__member
         Member:
         %li.Group__member--list
-          name1
-        %li.Group__member--list
-          name2
-        %li.Group__member--list
-          name3
+          - @group.users.each do |user|
+            = user.name
     .EditBtn
       = link_to "###", class: "Edit" do
         Edit
