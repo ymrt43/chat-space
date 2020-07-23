@@ -1,7 +1,7 @@
 $(function(){
   $('.Form').on('submit', function(e){
     e.preventDefault();
-    let formData = new formData(this);
+    let formData = new FormData(this);
     let url = $(this).attr('action');
     $.ajax({
       url: url,
