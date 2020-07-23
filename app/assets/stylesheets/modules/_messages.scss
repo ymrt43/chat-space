@@ -75,6 +75,7 @@
     height: calc(100vh - 100px - 90px);
     padding-left: 40px;
     padding-top: 35px;
+    overflow: scroll;
   }
   &__message--form {
     background-color: #d2d2d2;
