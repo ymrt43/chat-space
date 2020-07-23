@@ -6,7 +6,7 @@ $(function(){
     $.ajax({
       url: url,
       type: "POST",
-      data: formData
+      data: formData,
       dataType: 'json',
       processData: false,
       contentType: false
