@@ -54,9 +54,8 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      // $('.Chat').append(html);
-      // $('.Form__inputContent--textfield').val('');
-      // $('.Form__submit').prop('disabled', false);
+      $('.ChatMain__message--list').append(html);
+      $('form')[0].reset();
     })
-  })
+  });
 });
