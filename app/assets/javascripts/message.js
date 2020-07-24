@@ -85,4 +85,5 @@ $(function(){
       alert('error');
     });
   };
+  setInterval(reloadMessages, 7000);
 });
