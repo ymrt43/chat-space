@@ -3,7 +3,7 @@ $(function(){
     if ( message.image ) {
       let html =
         `<div class="Chat" data-message-id=${message.id}>
-          <div class="Chat__nfo">
+          <div class="Chat__info">
             <div class="Chat__info--name">
               ${message.user_name}
             </div>
