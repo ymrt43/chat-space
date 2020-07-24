@@ -64,28 +64,4 @@ $(function(){
       $('.Form__submit').prop('disabled', false);
     });
   });
-
-  let reloadMessages = function() {
-    let last_message_id = $('.Chat:last').data("message-id") || 0;
-    $.ajax({
-      url: "api/messages",
-      type: 'get',
-      dataType: 'json',
-      data: {id: last_message_id}
-    })
-    .done(function(messages) {
-      if (messages.length !== 0) {
-        let insertHTML = '';
-        $.each(messages, function(i, message) {
-          insertHTML += buildHTML(message)
-        });
-        $('.ChatMain__message--list').append(insertHTML);
-        $('.ChatMain__message--list').animate({ scrollTop: $('.ChatMain__message--list')[0].scrollHeight});
-      }
-    })
-    .fail(function() {
-      alert('error');
-    });
-  };
-  setInterval(reloadMessages, 7000);
 });
